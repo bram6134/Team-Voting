@@ -30,7 +30,7 @@ export default class HomeScreen extends Component {
     return (
       <View>
         <AppHeader />
-        <View>
+        <View style={styles.container}>
           <View style={styles.buttonsContainer}>
             <TouchableOpacity>
               <Image
@@ -40,17 +40,17 @@ export default class HomeScreen extends Component {
             </TouchableOpacity>
           </View>
           <View style={styles.ratingContainer}>
-            <Text style={{ textAlign: 'center',fontSize:25 }}>Vote Here</Text>
+            <Text style={{ textAlign: 'center',fontSize:25, color:'white' }}>Vote Here</Text>
             <TouchableOpacity
               style={styles.buttons}
               onPress ={this.teamA()}>
-              <Text style={{ fontSize:20}}>Team A</Text>
+              <Text style={{fontSize:20, color:'white'}}>Team A</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttons}
               onPress ={this.teamB()}>
-              <Text style={{ fontSize:20}}>Team B</Text>
+              <Text style={{fontSize:20, color:'white'}}>Team B</Text>
             </TouchableOpacity>
 
           </View>
@@ -61,12 +61,15 @@ export default class HomeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  container:{
+    backgroundColor:'black'
+  },
   buttonsContainer: {
     alignSelf: 'center',
     marginTop: 50,
   },
   buttons: {
-    backgroundColor:"coral",
+    backgroundColor:"blue",
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
@@ -74,6 +77,7 @@ const styles = StyleSheet.create({
     margin:10,
     width: 150,
     height: 50,
+    borderColor:'white'
   },
   ratingContainer: {
     alignSelf: 'center',
